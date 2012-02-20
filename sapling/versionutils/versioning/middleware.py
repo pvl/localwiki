@@ -32,7 +32,7 @@ class AutoTrackUserInfoMiddleware(object):
         user = None
         if hasattr(request, 'user') and request.user.is_authenticated():
             user = request.user
-        ip = request.META.get('REMOTE_ADDR', None)
+        ip = request.META.get('HTTP_X_REAL_IP', request.META.get('REMOTE_ADDR', None))
         self._set_lookup_fields(user=user, ip=ip)
 
         signals.pre_save.connect(self.update_fields, weak=False)
