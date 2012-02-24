@@ -1039,3 +1039,12 @@ based on sf.localwiki / dentonwiki
 #page .welcome .searchbox input {
     margin-top: 0.4em;
 }
+
+#site_title h1 {
+    font-family: 'Exo', sans-serif;
+}
+
+#site_title_dot {
+    color: #ccc;
+    letter-spacing:-3px
+}
