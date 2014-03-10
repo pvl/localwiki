@@ -38,7 +38,8 @@ class AutoTrackUserInfoMiddleware(object):
             if hasattr(request, 'user') and request.user.is_authenticated():
                 return request.user
         elif isinstance(field, AutoIPAddressField):
-            return request.META.get('REMOTE_ADDR', None)
+            return request.META.get('HTTP_X_REAL_IP', request.META.get('REMOTE_ADDR', None))
+
 
     def update_fields(self, sender, instance, **kws):
         for field in instance._meta.fields:

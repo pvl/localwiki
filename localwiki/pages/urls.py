@@ -139,7 +139,7 @@ urlpatterns = patterns('',
     # Basic page URLs.
     ##########################################################
     url(r'^/*$', slugify(PageDetailView.as_view()),
-        kwargs={'slug': 'Front Page'}, name='frontpage'),
+        kwargs={'slug': 'Entrada'}, name='frontpage'),
     url(r'^(?i)All_Pages/*$', ListView.as_view(**page_list_info),
         name='index'),
     # Random page
