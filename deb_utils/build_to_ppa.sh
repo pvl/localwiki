@@ -1,5 +1,5 @@
 #!/bin/bash
-UBUNTU_RELEASES="lucid maverick natty oneiric precise"
+UBUNTU_RELEASES="lucid precise quantal raring"
 
 if [[ "$1" = "" ]]
 then
