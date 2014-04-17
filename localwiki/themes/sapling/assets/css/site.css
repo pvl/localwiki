@@ -620,15 +620,9 @@ textarea, input, select {
 
 /*
 ====================================
- Nav 
+ Nav
 ====================================
 */
-#nav {
-    list-style-type: none;
-    margin-left: 2em;
-    margin-top: -2em;
-    position: absolute;
-}
 
 #nav ul {
     list-style-type: none;
